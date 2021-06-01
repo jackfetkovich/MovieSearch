@@ -10,7 +10,7 @@ const App = () => {
 
   const submitQuery = () => {
     console.log(query);
-    fetch(`http://www.omdbapi.com/?apikey=e22112b8&t=${query}`).then(res =>
+    fetch(`https://www.omdbapi.com/?apikey=e22112b8&t=${query}`).then(res =>
       res.json()
     ).then(data => setResults(data));
   };
