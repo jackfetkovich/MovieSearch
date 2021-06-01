@@ -1,9 +1,9 @@
-import React, { useEffect, useState } from 'react';
+import React, {useState } from 'react';
 import Nav from './Components/Nav'
 import SearchForm from './Components/SearchForm';
 import MovieSnapshot from './Components/MovieSnapshot';
 
-// KEY: e22112b8
+
 const App = () => {
   const [query, setQuery] = useState('');
   const [results, setResults] = useState('');
