@@ -1,25 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect, useState } from 'react';
+import Nav from './Components/Nav'
+import SearchForm from './Components/SearchForm';
+import MovieSnapshot from './Components/MovieSnapshot';
 
-function App() {
+// KEY: e22112b8
+const App = () => {
+  const [query, setQuery] = useState('');
+  const [results, setResults] = useState('');
+
+  const submitQuery = () => {
+    console.log(query);
+    fetch(`http://www.omdbapi.com/?apikey=e22112b8&t=${query}`).then(res =>
+      res.json()
+    ).then(data => setResults(data));
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='app'> 
+      <Nav />
+      <SearchForm
+        setQuery={setQuery}
+        submitQuery={submitQuery}
+        results={results}
+      />
+      <MovieSnapshot movie={results} />
     </div>
   );
-}
+};
 
 export default App;

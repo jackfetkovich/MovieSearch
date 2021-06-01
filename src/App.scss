@@ -1,0 +1,146 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Lato', sans-serif;
+}
+
+html {
+  background-color: rgb(241, 241, 241);
+
+}
+
+
+.app, #root {
+  width: 100%;
+  height: 100%;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 70px;
+  text-align: center;
+  color: white;
+  padding: 20px;
+  background-color: rgb(24, 24, 24);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.searchbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
+  width: 60%;
+
+  input {
+    // width: 40%;
+    flex-grow: 1;
+    height: 50px;
+    padding: 20px;
+    font-size: 1.5rem;
+  }
+
+  button {
+    height: 50px;
+    width: 100px;
+    border: 0;
+    background-color: rgb(204, 62, 19);
+    color: white;
+    font-size: 1.2rem;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+.snapshot {
+  margin-top: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 60%;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 10px 10px 10px -3px rgba(0,0,0,0.32);
+  background-color: white;
+
+  .info {
+    width: 50%;
+    text-align: center;
+    height: 100%;
+
+    .movie-title {
+      font-size: 3rem;
+    }
+
+    .stats {
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      
+      h3 {
+        margin: 5px;
+      }
+    }
+  } 
+
+  .plot {
+    font-weight: 300;
+  }
+
+  .photo {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img {
+      border-radius: 10px;
+    }
+  }
+}
+
+@media (max-width: 1500px){
+  .snapshot {
+    flex-direction: column-reverse;
+
+    .info {
+      margin: 30px;
+      width: 100%;
+    }
+  }
+}
+
+@media (max-width: 650px){
+  .searchbar, .snapshot {
+    width: 98%;
+  }
+
+  .searchbar {
+    button {
+      width: 200px;
+    }
+
+    input {
+      padding: 10px;
+    }
+  }
+
+  .snapshot {
+    .movie-title {
+      font-size: 1.5rem;
+    }
+  }
+}
