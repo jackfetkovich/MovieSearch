@@ -7,11 +7,10 @@
 
 html {
   background-color: rgb(241, 241, 241);
-
 }
 
-
-.app, #root {
+.app,
+#root {
   width: 100%;
   height: 100%;
 }
@@ -28,12 +27,16 @@ nav {
   width: 100%;
   height: 70px;
   text-align: center;
-  color: white;
   padding: 20px;
-  background-color: #13293D;
+  background-color: #270b4b;
   display: flex;
   align-items: center;
   justify-content: center;
+
+  .link {
+    color: white;
+    text-decoration: none;
+  }
 }
 
 .searchbar {
@@ -55,7 +58,7 @@ nav {
     height: 50px;
     width: 100px;
     border: 0;
-    background-color: #CA3C25;
+    background-color: #ca3c25;
     color: white;
     font-size: 1.2rem;
 
@@ -69,32 +72,46 @@ nav {
   margin-top: 10vh;
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: flex-start;
   width: 60%;
   padding: 20px;
   border-radius: 10px;
-  box-shadow: 10px 10px 10px -3px rgba(0,0,0,0.32);
+  box-shadow: 10px 10px 10px -3px rgba(0, 0, 0, 0.32);
   background-color: white;
 
   .info {
     width: 50%;
-    text-align: center;
-    height: 100%;
 
-    .movie-title {
-      font-size: 3rem;
-    }
-
-    .stats {
+    .supporting-info {
       display: flex;
       align-items: center;
-      justify-content: space-evenly;
+      justify-content: flex-start;
+      width: 100%;
       
       h3 {
-        margin: 5px;
+        margin-right: 20px;
+        font-weight: 300;
       }
     }
-  } 
+  }
+
+  .link {
+    color:#ca3c25;
+    font-weight: bold;
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+      
+    }
+  }
+
+  .movie-title {
+    font-size: 2rem;
+    text-align: left;
+    font-style: italic;
+
+
+  }
 
   .plot {
     font-weight: 300;
@@ -112,19 +129,43 @@ nav {
   }
 }
 
-@media (max-width: 1500px){
+@media (max-width: 1500px) {
   .snapshot {
     flex-direction: column-reverse;
 
     .info {
-      margin: 30px;
       width: 100%;
+      
+      .movie-title {
+        font-size: 2rem;
+        text-align: center;
+      }
+      .supporting-info {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        text-align: center;
+        
+        h3 {
+          text-align: center;
+          font-weight: 300;
+          margin: 10px;
+        }
+      }
     }
+
+    
   }
 }
 
-@media (max-width: 650px){
-  .searchbar, .snapshot {
+.movie-page {
+  margin-top: 150px;
+}
+
+@media (max-width: 650px) {
+  .searchbar,
+  .snapshot {
     width: 98%;
   }
 

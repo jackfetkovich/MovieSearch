@@ -2,10 +2,10 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faFilm } from '@fortawesome/free-solid-svg-icons'
 
 
-const Nav = () => {
+const Nav = ({Link}) => {
   return(
     <nav>
-      <h1><FontAwesomeIcon icon={faFilm} />   Movie Search</h1>
+      <Link to='/' className='link'><h1><FontAwesomeIcon icon={faFilm} />   Movie Search</h1></Link>
     </nav>
   )
 }
