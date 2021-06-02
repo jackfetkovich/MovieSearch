@@ -84,7 +84,8 @@
 
     .bar-inside {
       height: 100%;
-      background-color: #ca3c25;
+      background: rgb(202,60,37);
+      background: linear-gradient(90deg, rgba(202,60,37,1) 0%, rgba(246,202,68,1) 100%);
       border-radius: 30px;
       padding: 10px;
       display: flex;
