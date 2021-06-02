@@ -16,7 +16,6 @@ const App = () => {
   const [results, setResults] = useState([]);
 
   const submitQuery = () => {
-    console.log(query);
     fetch(`https://www.omdbapi.com/?apikey=e22112b8&s=${query}`)
       .then(res => res.json())
       .then(data => setResults(data.Search));

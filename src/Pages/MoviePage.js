@@ -7,7 +7,6 @@ const MoviePage = () => {
   const [movie, setMovie] = useState({});
 
   const getMovieInfo = () => {
-    console.log(id);
     window.scrollTo(0, 0);
     fetch(`https://www.omdbapi.com/?apikey=e22112b8&i=${id}`)
       .then(res => res.json())
