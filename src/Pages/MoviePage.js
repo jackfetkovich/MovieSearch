@@ -13,7 +13,7 @@ const MoviePage = () => {
       .then(data => setMovie(data));
   }
 
-  useEffect(getMovieInfo, []);
+  useEffect(getMovieInfo, [id]);
   
   return(
     <div className='movie-page'>
