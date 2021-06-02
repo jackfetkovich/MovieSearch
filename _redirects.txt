@@ -1,0 +1,2 @@
+# Used for redirecting to root after problems with react router
+/search    /
