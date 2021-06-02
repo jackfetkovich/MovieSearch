@@ -9,6 +9,10 @@ html {
   background-color: rgb(241, 241, 241);
 }
 
+@import './nav';
+@import './seachbar';
+@import './snapshot';
+
 .app,
 #root {
   width: 100%;
@@ -21,167 +25,7 @@ html {
   align-items: center;
 }
 
-nav {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  height: 70px;
-  text-align: center;
-  padding: 20px;
-  background-color: #270b4b;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  .link {
-    color: white;
-    text-decoration: none;
-  }
-}
-
-.searchbar {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 100px;
-  width: 60%;
-
-  input {
-    // width: 40%;
-    flex-grow: 1;
-    height: 50px;
-    padding: 20px;
-    font-size: 1.5rem;
-  }
-
-  button {
-    height: 50px;
-    width: 100px;
-    border: 0;
-    background-color: #ca3c25;
-    color: white;
-    font-size: 1.2rem;
-
-    &:hover {
-      cursor: pointer;
-    }
-  }
-}
-
-.snapshot {
-  margin-top: 10vh;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  width: 60%;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 10px 10px 10px -3px rgba(0, 0, 0, 0.32);
-  background-color: white;
-
-  .info {
-    width: 50%;
-
-    .supporting-info {
-      display: flex;
-      align-items: center;
-      justify-content: flex-start;
-      width: 100%;
-      
-      h3 {
-        margin-right: 20px;
-        font-weight: 300;
-      }
-    }
-  }
-
-  .link {
-    color:#ca3c25;
-    font-weight: bold;
-    text-decoration: none;
-    &:hover {
-      text-decoration: underline;
-      
-    }
-  }
-
-  .movie-title {
-    font-size: 2rem;
-    text-align: left;
-    font-style: italic;
-
-
-  }
-
-  .plot {
-    font-weight: 300;
-  }
-
-  .photo {
-    width: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    img {
-      border-radius: 10px;
-    }
-  }
-}
-
-@media (max-width: 1500px) {
-  .snapshot {
-    flex-direction: column-reverse;
-
-    .info {
-      width: 100%;
-      
-      .movie-title {
-        font-size: 2rem;
-        text-align: center;
-      }
-      .supporting-info {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
-        text-align: center;
-        
-        h3 {
-          text-align: center;
-          font-weight: 300;
-          margin: 10px;
-        }
-      }
-    }
-
-    
-  }
-}
-
 .movie-page {
   margin-top: 150px;
 }
 
-@media (max-width: 650px) {
-  .searchbar,
-  .snapshot {
-    width: 98%;
-  }
-
-  .searchbar {
-    button {
-      width: 200px;
-    }
-
-    input {
-      padding: 10px;
-    }
-  }
-
-  .snapshot {
-    .movie-title {
-      font-size: 1.5rem;
-    }
-  }
-}
