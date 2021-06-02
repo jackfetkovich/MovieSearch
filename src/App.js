@@ -25,7 +25,7 @@ const App = () => {
     <div className="app">
       <Router>
 
-      <Route exact path="/search">
+      <Route  path="/search">
           <Redirect to="/search"></Redirect>
         </Route>
         <Route exact path="/">
