@@ -8,15 +8,13 @@ const MoviePage = () => {
 
   const getMovieInfo = () => {
     console.log(id);
+    window.scrollTo(0, 0);
     fetch(`https://www.omdbapi.com/?apikey=e22112b8&i=${id}`)
       .then(res => res.json())
       .then(data => setMovie(data));
   };
 
-  useEffect(() => {
-    window.scrollTo(0, 0);
-    getMovieInfo();
-  }, [id]);
+  useEffect(getMovieInfo, [id]);
 
   return (
     <div className="movie-page">
